@@ -1,4 +1,3 @@
-#CuciKendaraan
 Aplikasi sederhana tentang pencucian kendaraan. 
 Aplikasi ini dibuat dengan menggunakan bahasa pemrograman Java dan Database MySQL.
 
