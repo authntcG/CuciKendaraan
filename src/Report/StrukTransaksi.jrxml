@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="297" pageHeight="421" columnWidth="241" leftMargin="28" rightMargin="28" topMargin="28" bottomMargin="28" uuid="6c73cd00-10ae-4400-a2f9-6aae9916ca09">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id_trx" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     *
+FROM
+     `vtransaksi` vtransaksi
+WHERE
+     `id_transaksi` = $P{id_trx}]]>
+	</queryString>
+	<field name="id_transaksi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status_cuci" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_user" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl_cuci" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_jenis" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipe_kendaraan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total_bayar" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bayar" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kembali" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="97994c94-04d9-45ae-bb2b-13f5dd419456" x="0" y="0" width="241" height="21"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="OCR A Extended" size="16" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Struk Pembayaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="da5bc3fc-f8ec-4ff6-b4f7-758c84228616" x="0" y="21" width="241" height="23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="OCR A Extended" size="12"/>
+				</textElement>
+				<text><![CDATA[myVWash]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="82" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="7d279095-81a9-4762-8293-1e34f517e223" x="0" y="2" width="74" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="OCR A Extended"/>
+				</textElement>
+				<text><![CDATA[Pelanggan]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="77cfe5f3-01d3-4460-bd5d-6eca3d8f8a9f" x="74" y="2" width="167" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="OCR A Extended"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_user}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8d84fc99-e608-40ab-a8d9-c145d4705544" x="74" y="22" width="167" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="OCR A Extended"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="fa17cea8-041b-43f5-8247-d29f7cda2ee4" x="0" y="62" width="241" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="OCR A Extended"/>
+				</textElement>
+				<text><![CDATA[------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7d279095-81a9-4762-8293-1e34f517e223" x="0" y="42" width="74" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="OCR A Extended"/>
+				</textElement>
+				<text><![CDATA[ID Transaksi]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="8d84fc99-e608-40ab-a8d9-c145d4705544" x="74" y="42" width="167" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="OCR A Extended"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_transaksi}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="f5597fb9-e34a-44ac-b526-0e63240bc665" x="0" y="0" width="89" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="OCR A Extended"/>
+				</textElement>
+				<text><![CDATA[Tgl Cuci]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="148c2db8-e5ee-4419-94a3-99142f876863" x="0" y="20" width="89" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="OCR A Extended"/>
+				</textElement>
+				<text><![CDATA[Jenis Kendaraan]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b7ee5958-9d70-4fd3-b4c2-a386a8b0c581" x="89" y="0" width="152" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="OCR A Extended"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tgl_cuci}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="85a51b80-bec8-483e-8385-f13030b60dc6" x="89" y="20" width="152" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="OCR A Extended"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_jenis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b58a961a-a973-4161-8c1e-9348189e8c0d" x="89" y="40" width="152" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="OCR A Extended"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipe_kendaraan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="fe1114f0-dc68-4a35-88df-0654dfda98ce" x="0" y="20" width="89" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="OCR A Extended"/>
+				</textElement>
+				<text><![CDATA[Total Bayar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8a45a48c-e92a-4508-ad13-73c94f774e8d" x="0" y="40" width="89" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="OCR A Extended"/>
+				</textElement>
+				<text><![CDATA[Bayar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="72025562-27c2-4e7d-9b27-bb97b35385d3" x="0" y="60" width="89" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="OCR A Extended"/>
+				</textElement>
+				<text><![CDATA[Kembali]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="1820332e-d67e-44fc-b590-1d39acfc1aa2" x="89" y="20" width="152" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="OCR A Extended"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_bayar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d7f6ed5a-c2d8-415a-b312-b1fe352ff2d1" x="89" y="40" width="152" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="OCR A Extended"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bayar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6394f411-7286-4ba9-8442-7f97b18dd838" x="89" y="60" width="152" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="OCR A Extended"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kembali}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="fa17cea8-041b-43f5-8247-d29f7cda2ee4" x="0" y="0" width="241" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="OCR A Extended"/>
+				</textElement>
+				<text><![CDATA[------------------------------------------]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="ce9b7b5a-74a3-43c3-922e-628119ac5b93" x="0" y="20" width="241" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="OCR A Extended"/>
+				</textElement>
+				<text><![CDATA[Terima Kasih]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fa17cea8-041b-43f5-8247-d29f7cda2ee4" x="0" y="0" width="241" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="OCR A Extended"/>
+				</textElement>
+				<text><![CDATA[------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ce9b7b5a-74a3-43c3-922e-628119ac5b93" x="0" y="40" width="241" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="OCR A Extended"/>
+				</textElement>
+				<text><![CDATA[myVWash - Anda Puas, Kami Senang]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="1" splitType="Stretch"/>
+	</summary>
+</jasperReport>
