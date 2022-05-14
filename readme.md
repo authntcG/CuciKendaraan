@@ -21,4 +21,4 @@ Library yang dibutuhkan untuk menjalankan program ini :
   - jasperreports-1.16.0
   - mysql-connector-java-5.1.23-bin
 
-Library yang dibutuhkan terdapat pada folder Library
+Library yang dibutuhkan terdapat pada folder **dist->lib**
